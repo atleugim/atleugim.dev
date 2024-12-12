@@ -7,13 +7,16 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "clean": "rm -rf .astro dist",
     "prepare": "husky",
     "format": "lint-staged"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.2.1",
     "@astrojs/tailwind": "^5.1.3",
     "@fontsource/geist-sans": "^5.1.0",
     "astro": "^5.0.4",
+    "astro-meta-tags": "^0.3.1",
     "tailwindcss": "^3.4.16"
   },
   "devDependencies": {
