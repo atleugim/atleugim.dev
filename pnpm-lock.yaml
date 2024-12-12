@@ -17,15 +17,12 @@ importers:
       '@astrojs/vercel':
         specifier: ^8.0.0
         version: 8.0.0(astro@5.0.4(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1))(rollup@4.28.1)
-      '@fontsource/geist-sans':
+      '@fontsource-variable/rubik':
         specifier: ^5.1.0
         version: 5.1.0
       astro:
         specifier: ^5.0.4
         version: 5.0.4(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1)
-      astro-meta-tags:
-        specifier: ^0.3.1
-        version: 0.3.1(astro@5.0.4(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1))
       tailwindcss:
         specifier: ^3.4.16
         version: 3.4.16
@@ -462,8 +459,8 @@ packages:
     resolution: {integrity: sha512-zSkKow6H5Kdm0ZUQUB2kV5JIXqoG0+uH5YADhaEHswm664N9Db8dXSi0nMJpacpMf+MyyglF1vnZohpEg5yUtg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@fontsource/geist-sans@5.1.0':
-    resolution: {integrity: sha512-4AI/UxIcZiYgK6/cTo4R9oM4VHHLcFdHVv7m2+M42VyY16hhKJADrGe4HPjTxvolmce2IZX/jc6sFJ+GkLB64w==}
+  '@fontsource-variable/rubik@5.1.0':
+    resolution: {integrity: sha512-gmh3xts3ARd0ktWW/VX+MVxhJr6TxHVeGLsQEaQXDVxvuNjn5WRucfKfXK3EVN2BcgRxUe1Fctv/v9zgEd0DUg==}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -972,11 +969,6 @@ packages:
   astro-eslint-parser@1.1.0:
     resolution: {integrity: sha512-F6NW1RJo5pp2kPnnM97M5Ohw8zAGjv83MpxHqfAochH68n/kiXN57+hYaNUCA7XkScoVNr6yzvly3hsY34TGfQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-
-  astro-meta-tags@0.3.1:
-    resolution: {integrity: sha512-6g/SfAVTV7BsGlfWU+s/Kvo6atyn9DpfI7Dq3fE/ck3ppfg30aoeT2Uxu7UH4yla3QXAUWaJIher7fGjewf0ew==}
-    peerDependencies:
-      astro: ^4.0.0 || ^5.0.0-beta.0
 
   astro@5.0.4:
     resolution: {integrity: sha512-L8ttsBv6Pu1ZlmSUlbdnQbh9AkkQx8LIfP0psP/wdefJ/dgWOCiHzMw/8jbln3pCi8tAq+EGPvhA1b2bi+B0DQ==}
@@ -3328,7 +3320,7 @@ snapshots:
     dependencies:
       levn: 0.4.1
 
-  '@fontsource/geist-sans@5.1.0': {}
+  '@fontsource-variable/rubik@5.1.0': {}
 
   '@humanfs/core@0.19.1': {}
 
@@ -3801,10 +3793,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
       - typescript
-
-  astro-meta-tags@0.3.1(astro@5.0.4(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1)):
-    dependencies:
-      astro: 5.0.4(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1)
 
   astro@5.0.4(@types/node@22.10.1)(jiti@1.21.6)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1):
     dependencies:

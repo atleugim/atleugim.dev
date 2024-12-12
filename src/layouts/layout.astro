@@ -1,5 +1,5 @@
 ---
-import "@fontsource/geist-sans";
+import "@fontsource-variable/rubik";
 
 import CursorFollower from "~/components/common/cursor-follower.astro";
 import MetaTags from "~/components/common/meta-tags.astro";
@@ -20,7 +20,7 @@ const { title } = Astro.props;
   <body class="bg-background text-foreground antialiased">
     <CursorFollower />
     <main
-      class="relative mx-auto flex w-full flex-col px-6 pt-4 sm:pb-10 sm:pt-20 lg:max-w-prose"
+      class="relative mx-auto flex w-full max-w-screen-md flex-col px-6 pt-4 sm:pb-10 sm:pt-20"
     >
       <ThemeSwitcher />
       <slot />
@@ -43,17 +43,18 @@ const { title } = Astro.props;
   }
 
   body {
-    font-family: "Geist Sans", sans-serif;
+    font-family: "Rubik Variable", sans-serif;
+    font-display: swap;
   }
 
   strong {
-    font-weight: normal;
+    font-weight: 400;
     transition: all var(--default-transition);
   }
 
   strong:hover {
     color: #ffffff;
-    font-weight: bold;
+    font-weight: 600;
     cursor: crosshair;
   }
 
