@@ -14,9 +14,8 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <MetaTags title={title} />
-  </head>
+  <MetaTags title={title} />
+
   <body class="bg-background text-foreground antialiased">
     <CursorFollower />
     <main
@@ -49,7 +48,7 @@ const { title } = Astro.props;
 
   strong {
     font-weight: 400;
-    transition: all var(--default-transition);
+    transition: font-weight var(--default-transition);
   }
 
   strong:hover {

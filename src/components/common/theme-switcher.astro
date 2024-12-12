@@ -5,7 +5,7 @@ import LightModeIcon from "./icons/light-mode.astro";
 
 <button
   type="button"
-  id="them-switcher"
+  id="theme-switcher"
   class="absolute right-4 top-4 grid size-9 place-items-center"
 >
   <LightModeIcon
@@ -19,7 +19,7 @@ import LightModeIcon from "./icons/light-mode.astro";
 
 <script>
   const setToggleListener = () => {
-    const toggleBtn = document.getElementById("them-switcher");
+    const toggleBtn = document.getElementById("theme-switcher");
 
     const handleToggleClick = () => {
       const element = document.documentElement;
@@ -44,9 +44,11 @@ import LightModeIcon from "./icons/light-mode.astro";
       ) {
         return localStorage.getItem("theme");
       }
+
       if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
         return "dark";
       }
+
       return "light";
     })();
 
