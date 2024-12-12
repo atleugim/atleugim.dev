@@ -1,0 +1,37 @@
+---
+import { Image } from "astro:assets";
+
+import type { SpotifyNowPlaying } from "../../types";
+import { joinArray } from "../../utils";
+import SpotifyIcon from "../common/icons/spotify.astro";
+
+interface Props {
+  data: SpotifyNowPlaying;
+}
+
+const { data } = Astro.props;
+---
+
+<a
+  href={data.external_urls.spotify}
+  rel="noopener noreferrer"
+  target="_blank"
+  class="flex w-full flex-wrap items-center justify-center gap-2 text-center"
+>
+  {
+    data.image ? (
+      <Image
+        src={data.image.url}
+        alt={data.name}
+        width={20}
+        height={20}
+        class="animate-[spin_5s_linear_infinite] rounded-full border border-card"
+      />
+    ) : (
+      <SpotifyIcon class="size-5" />
+    )
+  }
+  <span>
+    {joinArray(data.artists.map((a) => a.name))} - {data.name}
+  </span>
+</a>

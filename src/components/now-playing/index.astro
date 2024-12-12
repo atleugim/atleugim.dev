@@ -1,0 +1,14 @@
+---
+import { getNowPlaying } from "../../queries/spotify";
+import NotPlaying from "./not-playing.astro";
+import Playing from "./playing.astro";
+
+const data = await getNowPlaying();
+---
+
+<div
+  class="flex flex-col items-center justify-center space-y-2 font-mono text-sm font-bold"
+>
+  <span class="font-normal">Now playing</span>
+  {data ? <Playing data={data} /> : <NotPlaying />}
+</div>

@@ -1,0 +1,78 @@
+---
+import Vengeance from "./vengeance.astro";
+
+interface Props {
+  title?: string;
+}
+
+const { title } = Astro.props;
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="author" content="Miguel Vega" />
+<meta name="developer" content="atleugim" />
+<meta
+  name="description"
+  content="Frontend developer specialized in web and mobile development, building personal digital experiences."
+/>
+<meta name="category" content="Developer Portfolio" />
+
+<meta
+  property="og:site_name"
+  content="Miguel Vega - Frontend developer specialized in web and mobile development, building personal digital experiences."
+/>
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:url" content="https://atleugim.dev" />
+<meta
+  property="og:title"
+  content={title ?? "Miguel Vega - Frontend Developer"}
+/>
+<meta
+  property="og:description"
+  content="Frontend developer specialized in web and mobile development, building personal digital experiences."
+  ,
+/>
+<meta
+  property="og:image"
+  content="https://atleugim.dev/assets/images/miguel_angel.webp"
+/>
+<meta property="og:image:width" content="800" />
+<meta property="og:image:height" content="600" />
+
+<meta name="twitter:creator" content="@atleugim" />
+<meta
+  name="twitter:title"
+  content={title ?? "Miguel Vega - Frontend Developer"}
+/>
+<meta
+  name="twitter:description"
+  content="Frontend developer specialized in web and mobile development, building personal digital experiences."
+  ,
+/>
+<meta name="twitter:site" content="https://atleugim.dev" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta
+  name="twitter:image"
+  content="https://atleugim.dev/assets/images/miguel_angel.webp"
+/>
+
+<meta name="robots" content="index,follow" />
+<meta
+  name="googlebot"
+  content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
+/>
+
+<meta
+  name="keywords"
+  content="Miguel Ángel Vega, atleugim, fullstack developer, frontend developer, web developer, mobile developer, Flutter, Dart, React, web development, mobile apps development, Android, iOS, freelance developer, software engineer, frontend development, React development, Flutter developer, app developer, programming, software developer, desarrollo de software, desarrollador fullstack, desarrollador frontend, desarrollador móvil, desarrollo web, aplicaciones móviles, desarrollo de apps, programador freelance"
+/>
+
+<link rel="sitemap" href="/sitemap-index.xml" />
+<link rel="canonical" href="https://atleugim.dev/" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+<title>{title ?? "Miguel Vega - Frontend Developer"}</title>
+
+<Vengeance />

@@ -1,0 +1,37 @@
+---
+import { EMAIL_URL, GH_URL, LI_URL } from "../../../utils/constants";
+import Tooltip from "../tooltip.astro";
+import ContactItem from "./item.astro";
+
+import FileDownload from "../icons/file-download.astro";
+import GithubIcon from "../icons/github.astro";
+import LinkedIn from "../icons/linked-in.astro";
+import Mail from "../icons/mail.astro";
+---
+
+<div class="flex w-full gap-4">
+  <Tooltip text="GitHub" class="px-2 py-1">
+    <ContactItem href={GH_URL} label="GitHub">
+      <GithubIcon class="size-5" />
+    </ContactItem>
+  </Tooltip>
+  <Tooltip text="LinkedIn" class="px-2 py-1">
+    <ContactItem href={LI_URL} label="LinkedIn">
+      <LinkedIn class="size-5" />
+    </ContactItem>
+  </Tooltip>
+  <Tooltip text="Email" class="px-2 py-1">
+    <ContactItem href={EMAIL_URL} label="Email">
+      <Mail class="size-5" />
+    </ContactItem>
+  </Tooltip>
+  <Tooltip text="Download CV" class="px-2 py-1">
+    <ContactItem
+      href="/resume.pdf"
+      label="Resume"
+      download="Miguel Vega - Resume.pdf"
+    >
+      <FileDownload class="size-5" />
+    </ContactItem>
+  </Tooltip>
+</div>
