@@ -1,5 +1,3 @@
-import type { SpotifyImage } from "../types";
-
 export const joinArray = (array: Array<any>, locale = "en"): string => {
   const formatter = new Intl.ListFormat(locale, {
     style: "long",

@@ -1,14 +1,12 @@
-import type { Job, Project } from "../types";
+import HiBeautyLogo from "~/assets/logos/hi_beauty.svg";
+import LumLogo from "~/assets/logos/lum_logistic.svg";
+import ReempLogo from "~/assets/logos/reemp.svg";
+import StartupsLabAgenciaLogo from "~/assets/logos/startups_lab_agencia.svg";
 
-import HiBeautyLogo from "../assets/logos/hi_beauty.svg";
-import LumLogo from "../assets/logos/lum_logistic.svg";
-import ReempLogo from "../assets/logos/reemp.svg";
-import StartupsLabAgenciaLogo from "../assets/logos/startups_lab_agencia.svg";
-
-import screenshot1 from "../assets/screenshots/1.webp";
-import screenshot2 from "../assets/screenshots/2.webp";
-import screenshot3 from "../assets/screenshots/3.webp";
-import screenshot4 from "../assets/screenshots/4.webp";
+import screenshot1 from "~/assets/screenshots/1.webp";
+import screenshot2 from "~/assets/screenshots/2.webp";
+import screenshot3 from "~/assets/screenshots/3.webp";
+import screenshot4 from "~/assets/screenshots/4.webp";
 
 export const jobs: Job[] = [
   {

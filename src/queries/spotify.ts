@@ -4,10 +4,9 @@ import {
   SPOTIFY_NOW_PLAYING_ENDPOINT,
   SPOTIFY_REFRESH_TOKEN,
   SPOTIFY_TOKEN_ENDPOINT,
-} from "../utils/constants";
+} from "~/utils/constants";
 
-import type { SpotifyNowPlaying } from "../types";
-import { getSmallestImage } from "../utils";
+import { getSmallestImage } from "~/utils/helpers";
 
 const getAccessToken = async (): Promise<{
   access_token: string;

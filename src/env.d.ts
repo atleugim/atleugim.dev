@@ -1,21 +1,29 @@
-import type { ImageMetadata } from "astro";
+interface ImportMetaEnv {
+  readonly SPOTIFY_CLIENT_ID: string;
+  readonly SPOTIFY_CLIENT_SECRET: string;
+  readonly SPOTIFY_REFRESH_TOKEN: string;
+}
+
+interface ImportMeta {
+  readonly env: ImportMetaEnv;
+}
 
 // SPOTIFY
-export interface SpotifyArtist {
+interface SpotifyArtist {
   name: string;
 }
 
-export interface SpotifyImage {
+interface SpotifyImage {
   url: string;
   height: number;
   width: number;
 }
 
-export interface SpotifyExternalUrls {
+interface SpotifyExternalUrls {
   spotify: string;
 }
 
-export interface SpotifyNowPlaying {
+interface SpotifyNowPlaying {
   artists: SpotifyArtist[];
   external_urls: SpotifyExternalUrls;
   name: string;
@@ -23,7 +31,7 @@ export interface SpotifyNowPlaying {
 }
 
 // EXPERIENCE
-export interface Job {
+interface Job {
   title: string;
   description: string;
   role: string;
@@ -34,7 +42,7 @@ export interface Job {
 }
 
 // PORTFOLIO
-export interface Project {
+interface Project {
   title: string;
   image: ImageMetadata;
   link: string;

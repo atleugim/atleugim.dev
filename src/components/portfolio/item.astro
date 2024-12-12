@@ -1,15 +1,8 @@
 ---
-import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 import ExternalLink from "../common/icons/external-link.astro";
 
-interface Props {
-  title: string;
-  image: ImageMetadata;
-  link: string;
-}
-
-const { title, image, link } = Astro.props;
+const { title, image, link } = Astro.props as Project;
 ---
 
 <li
