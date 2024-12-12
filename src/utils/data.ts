@@ -49,22 +49,22 @@ export const jobs: Job[] = [
 
 export const projects: Project[] = [
   {
-    title: "Hi Beauty - Main Page",
+    title: "Hi Beauty homepage",
     image: screenshot1,
     link: "https://hibeauty.com.co/"
   },
   {
-    title: "StartupsLab Agency - Landing Page Work in Progress",
+    title: "StartupsLab Agency website in progress",
     image: screenshot2,
     link: "https://startupslabagencia.vercel.app/"
   },
   {
-    title: "StartupsLab EDU - Main Page",
+    title: "StartupsLab EDU homepage",
     image: screenshot3,
     link: "https://startupslabedu.vercel.app/"
   },
   {
-    title: "Hi Beauty - App",
+    title: "Hi Beauty app design",
     image: screenshot4,
     link: "https://apps.apple.com/co/app/hibeauty/id6511218761"
   }
