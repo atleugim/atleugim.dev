@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+
 import Tooltip from "../common/tooltip.astro";
 
 const { image, title, description, role, date, current, color } =
@@ -9,8 +10,8 @@ const { image, title, description, role, date, current, color } =
 <li class="flex items-center gap-4">
   <div
     class:list={[
-      "rounded-full flex items-center justify-center aspect-square p-2",
-      color ?? "bg-black",
+      "flex aspect-square items-center justify-center rounded-full p-2",
+      color ?? "bg-black"
     ]}
   >
     <Image src={image} alt={title} loading="eager" width={40} height={40} />
@@ -18,15 +19,15 @@ const { image, title, description, role, date, current, color } =
   <div>
     <div class="flex items-center gap-4">
       <Tooltip text={description} class="-left-0 -translate-x-0">
-        <h3 class="font-bold cursor-help">
+        <h3 class="cursor-help font-bold">
           {title}
         </h3>
       </Tooltip>
       {
         current && (
           <div class="relative">
-            <span class="size-2 bg-green-500 inline-block rounded-full animate-pulse absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2" />
-            <span class="size-3 bg-green-500 inline-block rounded-full animate-ping absolute -left-1.5 -top-1.5" />
+            <span class="absolute left-1/2 top-1/2 inline-block size-2 -translate-x-1/2 -translate-y-1/2 animate-pulse rounded-full bg-green-500" />
+            <span class="absolute -left-1.5 -top-1.5 inline-block size-3 animate-ping rounded-full bg-green-500" />
           </div>
         )
       }

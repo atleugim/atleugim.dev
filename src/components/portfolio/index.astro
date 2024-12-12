@@ -1,5 +1,6 @@
 ---
 import { projects } from "~/utils/data";
+
 import Article from "../common/article.astro";
 import Section from "../common/section.astro";
 import PortfolioItem from "./item.astro";
@@ -7,7 +8,7 @@ import PortfolioItem from "./item.astro";
 
 <Section>
   <Article title="Portfolio">
-    <ul class="md:grid-cols-2 gap-6 grid">
+    <ul class="grid gap-6 md:grid-cols-2">
       {projects.map((project) => <PortfolioItem {...project} />)}
     </ul>
   </Article>

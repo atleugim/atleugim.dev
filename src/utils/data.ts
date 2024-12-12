@@ -2,7 +2,6 @@ import HiBeautyLogo from "~/assets/logos/hi_beauty.svg";
 import LumLogo from "~/assets/logos/lum_logistic.svg";
 import ReempLogo from "~/assets/logos/reemp.svg";
 import StartupsLabAgenciaLogo from "~/assets/logos/startups_lab_agencia.svg";
-
 import screenshot1 from "~/assets/screenshots/1.webp";
 import screenshot2 from "~/assets/screenshots/2.webp";
 import screenshot3 from "~/assets/screenshots/3.webp";
@@ -17,7 +16,7 @@ export const jobs: Job[] = [
     date: "2023 - Present",
     current: true,
     color: "bg-[#3A3A3A]",
-    image: LumLogo,
+    image: LumLogo
   },
   {
     title: "Hi Beauty",
@@ -26,7 +25,7 @@ export const jobs: Job[] = [
     role: "Frontend Developer",
     date: "2022 - 2023",
     color: "bg-[#C23775]",
-    image: HiBeautyLogo,
+    image: HiBeautyLogo
   },
   {
     title: "Reemp Group",
@@ -35,7 +34,7 @@ export const jobs: Job[] = [
     role: "Flutter Developer",
     date: "2021 - 2022",
     color: "bg-[#263038]",
-    image: ReempLogo,
+    image: ReempLogo
   },
   {
     title: "StartupsLab Agency",
@@ -44,29 +43,29 @@ export const jobs: Job[] = [
     role: "Frontend Developer",
     date: "2020 - 2022",
     color: "bg-[#EF7D43]",
-    image: StartupsLabAgenciaLogo,
-  },
+    image: StartupsLabAgenciaLogo
+  }
 ];
 
 export const projects: Project[] = [
   {
     title: "Hi Beauty - Main Page",
     image: screenshot1,
-    link: "https://hibeauty.com.co/",
+    link: "https://hibeauty.com.co/"
   },
   {
     title: "StartupsLab Agency - Landing Page Work in Progress",
     image: screenshot2,
-    link: "https://startupslabagencia.vercel.app/",
+    link: "https://startupslabagencia.vercel.app/"
   },
   {
     title: "StartupsLab EDU - Main Page",
     image: screenshot3,
-    link: "https://startupslabedu.vercel.app/",
+    link: "https://startupslabedu.vercel.app/"
   },
   {
     title: "Hi Beauty - App",
     image: screenshot4,
-    link: "https://apps.apple.com/co/app/hibeauty/id6511218761",
-  },
+    link: "https://apps.apple.com/co/app/hibeauty/id6511218761"
+  }
 ];

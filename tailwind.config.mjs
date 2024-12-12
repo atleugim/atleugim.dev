@@ -7,9 +7,9 @@ export default {
       colors: {
         background: "rgb(var(--background) / <alpha-value>)",
         foreground: "rgb(var(--foreground) / <alpha-value>)",
-        dimmed: "rgb(var(--dimmed) / <alpha-value>)",
-      },
-    },
+        dimmed: "rgb(var(--dimmed) / <alpha-value>)"
+      }
+    }
   },
-  plugins: [],
+  plugins: []
 };

@@ -3,9 +3,8 @@ import {
   SPOTIFY_CLIENT_SECRET,
   SPOTIFY_NOW_PLAYING_ENDPOINT,
   SPOTIFY_REFRESH_TOKEN,
-  SPOTIFY_TOKEN_ENDPOINT,
+  SPOTIFY_TOKEN_ENDPOINT
 } from "~/utils/constants";
-
 import { getSmallestImage } from "~/utils/helpers";
 
 const getAccessToken = async (): Promise<{
@@ -17,16 +16,16 @@ const getAccessToken = async (): Promise<{
 
   const params = new URLSearchParams([
     ["grant_type", "refresh_token"],
-    ["refresh_token", SPOTIFY_REFRESH_TOKEN],
+    ["refresh_token", SPOTIFY_REFRESH_TOKEN]
   ]);
 
   const response = await fetch(SPOTIFY_TOKEN_ENDPOINT, {
     method: "POST",
     headers: {
       Authorization: `Basic ${basic}`,
-      "Content-Type": "application/x-www-form-urlencoded",
+      "Content-Type": "application/x-www-form-urlencoded"
     },
-    body: params,
+    body: params
   });
 
   return response.json();
@@ -45,8 +44,8 @@ export const getNowPlaying = async (): Promise<
     const response = await fetch(SPOTIFY_NOW_PLAYING_ENDPOINT, {
       headers: {
         Authorization: `Bearer ${access_token}`,
-        accept: "application/json",
-      },
+        accept: "application/json"
+      }
     });
 
     if (!response.ok) {
@@ -59,7 +58,7 @@ export const getNowPlaying = async (): Promise<
       artists: res.item.artists,
       external_urls: res.item.external_urls,
       name: res.item.name,
-      image: getSmallestImage(res.item.album.images),
+      image: getSmallestImage(res.item.album.images)
     };
   } catch (err) {
     return undefined;

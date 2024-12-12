@@ -1,5 +1,6 @@
 ---
 import { jobs } from "~/utils/data";
+
 import Article from "../common/article.astro";
 import Section from "../common/section.astro";
 import ExperienceItem from "./item.astro";
@@ -7,7 +8,7 @@ import ExperienceItem from "./item.astro";
 
 <Section>
   <Article title="Experience">
-    <ul class="grid md:grid-cols-2 gap-6">
+    <ul class="grid gap-6 md:grid-cols-2">
       {jobs.map((job) => <ExperienceItem {...job} />)}
     </ul>
   </Article>

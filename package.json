@@ -6,7 +6,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "prepare": "husky",
+    "format": "lint-staged"
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.1.3",
@@ -15,7 +17,19 @@
     "tailwindcss": "^3.4.16"
   },
   "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.4.0",
     "@types/node": "^22.10.1",
+    "@typescript-eslint/parser": "^8.18.0",
+    "eslint": "^9.16.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-astro": "^1.3.1",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-tailwindcss": "^3.17.5",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.11",
+    "prettier": "^3.4.2",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-tailwindcss": "^0.6.9",
     "sharp": "^0.33.5"
   }
 }

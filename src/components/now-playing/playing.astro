@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 
 import { joinArray } from "~/utils/helpers";
+
 import SpotifyIcon from "../common/icons/spotify.astro";
 
 interface Props {
@@ -24,7 +25,7 @@ const { data } = Astro.props;
         alt={data.name}
         width={20}
         height={20}
-        class="animate-[spin_5s_linear_infinite] rounded-full border border-card"
+        class="border-card animate-[spin_5s_linear_infinite] rounded-full border"
       />
     ) : (
       <SpotifyIcon class="size-5" />

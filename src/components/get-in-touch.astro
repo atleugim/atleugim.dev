@@ -1,12 +1,11 @@
 ---
+import { EMAIL_URL } from "../utils/constants";
 import H2 from "./common/headings/h2.astro";
 import P from "./common/headings/p.astro";
 import Section from "./common/section.astro";
-
-import { EMAIL_URL } from "../utils/constants";
 ---
 
-<Section class="text-center items-center border-none">
+<Section class="items-center border-none text-center">
   <H2>Get in touch</H2>
   <P class="text-center">
     Feel free to ask a question or if you just want to say hi, I'll do my best
@@ -15,7 +14,7 @@ import { EMAIL_URL } from "../utils/constants";
   <a
     href={EMAIL_URL}
     rel="noopener noreferrer"
-    class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-8 rounded-full duration-200"
+    class="rounded-full bg-blue-600 px-8 py-2 font-bold text-white duration-200 hover:bg-blue-700"
   >
     Say Hello
   </a>

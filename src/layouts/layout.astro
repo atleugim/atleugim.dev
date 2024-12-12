@@ -1,5 +1,6 @@
 ---
 import "@fontsource/geist-sans";
+
 import CursorFollower from "~/components/common/cursor-follower.astro";
 import MetaTags from "~/components/common/meta-tags.astro";
 import ThemeSwitcher from "~/components/common/theme-switcher.astro";
@@ -19,7 +20,7 @@ const { title } = Astro.props;
   <body class="bg-background text-foreground antialiased">
     <CursorFollower />
     <main
-      class="lg:max-w-prose w-full px-6 mx-auto pt-4 sm:pt-20 sm:pb-10 flex flex-col relative"
+      class="relative mx-auto flex w-full flex-col px-6 pt-4 sm:pb-10 sm:pt-20 lg:max-w-prose"
     >
       <ThemeSwitcher />
       <slot />

@@ -1,16 +1,17 @@
 ---
 import { Image } from "astro:assets";
+
 import ExternalLink from "../common/icons/external-link.astro";
 
 const { title, image, link } = Astro.props as Project;
 ---
 
 <li
-  class="aspect-video group border border-foreground/10 rounded-md overflow-hidden"
+  class="group aspect-video overflow-hidden rounded-md border border-foreground/10"
 >
   <a href={link} rel="noopener noreferrer" target="_blank" class="relative">
     <div
-      class="absolute size-full bg-background/30 backdrop-blur-sm transition-opacity duration-300 opacity-0 group-hover:opacity-100 grid place-content-center"
+      class="absolute grid size-full place-content-center bg-background/30 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100"
     >
       <ExternalLink class="size-8" />
     </div>

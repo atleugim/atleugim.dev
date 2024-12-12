@@ -9,7 +9,7 @@ interface Props {
 const { title, class: className } = Astro.props;
 ---
 
-<article class="grid gap-6 w-full">
+<article class="grid w-full gap-6">
   {title && <H2>{title}</H2>}
   <div class:list={["grid list-disc gap-2", className]}>
     <slot />
