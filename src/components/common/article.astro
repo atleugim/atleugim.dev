@@ -1,5 +1,5 @@
 ---
-import H2 from "./headings/h2.astro";
+import Typography from "./typography.astro";
 
 interface Props {
   title?: string;
@@ -10,7 +10,7 @@ const { title, class: className } = Astro.props;
 ---
 
 <article class="grid w-full gap-6">
-  {title && <H2>{title}</H2>}
+  {title && <Typography level={2}>{title}</Typography>}
   <div class:list={["grid list-disc gap-2", className]}>
     <slot />
   </div>

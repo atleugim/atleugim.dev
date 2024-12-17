@@ -2,9 +2,9 @@
 import { Image } from "astro:assets";
 
 import Tooltip from "../common/tooltip.astro";
+import Typography from "../common/typography.astro";
 
-const { image, title, description, role, date, current, color } =
-  Astro.props as Job;
+const { image, title, description, role, date, current, color } = Astro.props;
 ---
 
 <li class="flex items-center gap-4">
@@ -19,9 +19,9 @@ const { image, title, description, role, date, current, color } =
   <div>
     <div class="flex items-center gap-4">
       <Tooltip text={description} class="-left-0 -translate-x-0">
-        <h3 class="cursor-help font-bold">
+        <Typography level={3} class="cursor-help font-bold">
           {title}
-        </h3>
+        </Typography>
       </Tooltip>
       {
         current && (

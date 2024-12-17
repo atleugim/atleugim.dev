@@ -1,0 +1,26 @@
+---
+type Level = 1 | 2 | 3;
+
+interface Props {
+  level?: Level;
+  as?: "heading" | "paragraph";
+  class?: string;
+}
+
+const { level = 2, as: asTag = "heading", class: className = "" } = Astro.props;
+
+const textStyles: Record<Level, string> = {
+  1: "text-3xl sm:text-4xl font-bold",
+  2: "text-xl sm:text-2xl font-semibold",
+  3: ""
+};
+
+const Tag = asTag == "heading" ? `h${Math.min(Math.max(level, 1), 6)}` : "p";
+
+const baseClasses =
+  asTag == "heading" ? textStyles[level] : "text-lg text-dimmed sm:text-xl";
+---
+
+<Tag class:list={[baseClasses, className]}>
+  <slot />
+</Tag>
