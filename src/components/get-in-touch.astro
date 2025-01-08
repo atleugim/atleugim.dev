@@ -1,15 +1,16 @@
 ---
 import { EMAIL_URL } from "../utils/constants";
+import H2 from "./common/headings/h2.astro";
+import P from "./common/headings/p.astro";
 import Section from "./common/section.astro";
-import Typography from "./common/typography.astro";
 ---
 
 <Section class="items-center border-none text-center">
-  <Typography level={2}>Get in touch</Typography>
-  <Typography as="paragraph" class="text-center">
+  <H2>Get in touch</H2>
+  <P class="text-center">
     Feel free to ask a question or if you just want to say hi, I'll do my best
     to get back to you!
-  </Typography>
+  </P>
   <a
     href={EMAIL_URL}
     rel="noopener noreferrer"

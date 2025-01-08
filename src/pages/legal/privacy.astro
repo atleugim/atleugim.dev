@@ -4,64 +4,61 @@ import Layout from "~/layouts/layout.astro";
 import { EMAIL_ADDRESS, EMAIL_URL } from "~/utils/constants";
 
 import Article from "~/components/common/article.astro";
+import H1 from "~/components/common/headings/h1.astro";
+import P from "~/components/common/headings/p.astro";
 import Section from "~/components/common/section.astro";
-import Typography from "~/components/common/typography.astro";
 
 // THIS PAGE IS ONLY FOR MY GOOGLE PLAY DEVELOPER ACCOUNT
 ---
 
-<Layout title="atleugim - Privacy Policy">
+<Layout title="Privacy Policy">
   <Section class="grid gap-10 border-none">
-    <Typography level={1}>Privacy Policy</Typography>
+    <H1>Privacy Policy</H1>
     <Article>
-      <Typography as="paragraph"
-        >The service is provided at no cost and is intended for use as is.</Typography
-      >
-      <Typography as="paragraph">
+      <P>The service is provided at no cost and is intended for use as is.</P>
+      <P>
         This page is used to inform visitors regarding my policies with the
         collection, use, and disclosure of Personal Information if anyone
         decided to use my Service.
-      </Typography>
-      <Typography as="paragraph">
+      </P>
+      <P>
         If you choose to use my Service, then you agree to the collection and
         use of information in relation to this policy. The Personal Information
         that I collect is used for providing and improving the Service. I will
         not use or share your information with anyone except as described in
         this Privacy Policy.
-      </Typography>
+      </P>
     </Article>
     <Article title="Information Collection and Use">
-      <Typography as="paragraph">
+      <P>
         As of the date of publication of this privacy policy, I do not require
         anything from you.
-      </Typography>
+      </P>
     </Article>
     <Article title="Log Data">
-      <Typography as="paragraph"
-        >I do not collect any kind of log information.</Typography
-      >
+      <P>I do not collect any kind of log information.</P>
     </Article>
     <Article title="Cookies">
-      <Typography as="paragraph">
+      <P>
         Cookies are files with a small amount of data that are commonly used as
         anonymous unique identifiers. These are sent to your browser from the
         websites that you visit and are stored on your device&apos;s internal
         memory.
-      </Typography>
-      <Typography as="paragraph">
+      </P>
+      <P>
         This Service does not use these “cookies” explicitly. However, the app
         may use third-party code and libraries that use “cookies” to collect
         information and improve their services. You have the option to either
         accept or refuse these cookies and know when a cookie is being sent to
         your device. If you choose to refuse our cookies, you may not be able to
         use some portions of this Service.
-      </Typography>
+      </P>
     </Article>
     <Article title="Service Providers">
-      <Typography as="paragraph">
+      <P>
         I may employ third-party companies and individuals due to the following
         reasons:
-      </Typography>
+      </P>
       <ul class="list-disc pl-4">
         <li>To facilitate our Service;</li>
         <li>To provide the Service on our behalf;</li>
@@ -70,26 +67,23 @@ import Typography from "~/components/common/typography.astro";
       </ul>
     </Article>
     <Article title="Security">
-      <Typography as="paragraph">
+      <P>
         I value your trust in providing us your Personal Information, thus we
-        are striving to use commercially acceptable means of protecting it. But
-        remember that no method of transmission over the internet, or method of
-        electronic storage is 100% secure and reliable, and I cannot guarantee
-        its absolute security.
-      </Typography>
+        are striving to use commercially acceptable means of protecting it.
+      </P>
     </Article>
     <Article title="Links to Other Sites">
-      <Typography as="paragraph">
+      <P>
         This Service may contain links to other sites. If you click on a
         third-party link, you will be directed to that site. Note that these
         external sites are not operated by me. Therefore, I strongly advise you
         to review the Privacy Policy of these websites. I have no control over
         and assume no responsibility for the content, privacy policies, or
         practices of any third-party sites or services.
-      </Typography>
+      </P>
     </Article>
     <Article title="Children's Privacy">
-      <Typography as="paragraph">
+      <P>
         I do not knowingly collect personally identifiable information from
         children. I encourage all children to never submit any personally
         identifiable information through the Application and/or Services. I
@@ -103,26 +97,24 @@ import Typography from "~/components/common/typography.astro";
         processing of your personally identifiable information in your country
         (in some countries we may allow your parent or guardian to do so on your
         behalf).
-      </Typography>
+      </P>
     </Article>
     <Article title="Changes to This Privacy Policy">
-      <Typography as="paragraph">
+      <P>
         I may update our Privacy Policy from time to time. Thus, you are advised
         to review this page periodically for any changes. I will notify you of
         any changes by posting the new Privacy Policy on this page.
-      </Typography>
-      <Typography as="paragraph"
-        >This policy is effective as of 2024-02-01
-      </Typography>
+      </P>
+      <P>This policy is effective as of 2024-02-01 </P>
     </Article>
     <Article title="Contact Us">
-      <Typography as="paragraph">
+      <P>
         If you have any questions or suggestions about my Privacy Policy, do not
         hesitate to contact me at{" "}
         <a href={EMAIL_URL} rel="noopener noreferrer">
           {EMAIL_ADDRESS}
         </a>
-      </Typography>
+      </P>
     </Article>
   </Section>
 </Layout>

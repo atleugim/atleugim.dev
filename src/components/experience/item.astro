@@ -1,8 +1,8 @@
 ---
 import { Image } from "astro:assets";
 
+import H3 from "../common/headings/h3.astro";
 import Tooltip from "../common/tooltip.astro";
-import Typography from "../common/typography.astro";
 
 const { image, title, description, role, date, current, color } = Astro.props;
 ---
@@ -19,9 +19,9 @@ const { image, title, description, role, date, current, color } = Astro.props;
   <div>
     <div class="flex items-center gap-4">
       <Tooltip text={description} class="-left-0 -translate-x-0">
-        <Typography level={3} class="cursor-help font-bold">
+        <H3 class="cursor-help font-bold">
           {title}
-        </Typography>
+        </H3>
       </Tooltip>
       {
         current && (

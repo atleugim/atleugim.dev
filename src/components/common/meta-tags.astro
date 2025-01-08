@@ -1,7 +1,4 @@
 ---
-import Inspector from "./inspector.astro";
-import Vengeance from "./vengeance.astro";
-
 interface Props {
   title?: string;
 }
@@ -9,7 +6,6 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<Inspector />
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width" />
@@ -71,9 +67,7 @@ const { title } = Astro.props;
 
   <meta id="meta-theme-color" name="theme-color" content="var(--background)" />
 
-  <title>{title ?? "Miguel Vega - Frontend Developer"}</title>
-
   <meta name="generator" content={Astro.generator} />
 
-  <Vengeance />
+  <title>{title ?? "Miguel Vega - Frontend Developer"}</title>
 </head>
