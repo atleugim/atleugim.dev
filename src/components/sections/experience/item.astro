@@ -1,0 +1,40 @@
+---
+import { Image } from "astro:assets";
+
+import ActiveIndicator from "~/components/shared/active-indicator.astro";
+import H4 from "~/components/shared/headings/h4.astro";
+import P from "~/components/shared/headings/p.astro";
+
+interface Props {
+  job: Job;
+}
+
+const { job } = Astro.props;
+---
+
+<li class="flex items-start gap-4">
+  <div
+    class="flex aspect-square size-12 items-center justify-center rounded-full"
+    style={{
+      backgroundColor: job.color,
+    }}
+  >
+    <Image
+      src={job.logo}
+      alt={job.company}
+      loading="eager"
+      width={30}
+      height={30}
+    />
+  </div>
+  <div class="flex flex-col gap-0.5">
+    <div class="flex items-center gap-2.5">
+      <H4>{job.company}</H4>
+      {job.current && <ActiveIndicator />}
+    </div>
+    <span class="text-sm font-medium">
+      {job.role} • {job.date}
+    </span>
+    <P>{job.description}</P>
+  </div>
+</li>

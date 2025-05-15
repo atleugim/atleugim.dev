@@ -1,0 +1,17 @@
+---
+import H3 from "./headings/h3.astro";
+
+interface Props {
+  title?: string;
+  class?: string;
+}
+
+const { title, class: className } = Astro.props;
+---
+
+<article class="grid w-full gap-4">
+  {title && <H3>{title}</H3>}
+  <div class:list={["grid list-disc gap-1", className]}>
+    <slot />
+  </div>
+</article>

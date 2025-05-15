@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+
+import ExternalLinkIcon from "~/components/shared/icons/external-link.astro";
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+---
+
+<li class="border-foreground/10 aspect-video overflow-hidden rounded-md border">
+  <a
+    href={project.link}
+    rel="noopener noreferrer"
+    target="_blank"
+    class="group relative"
+  >
+    <div
+      class="bg-background/30 absolute z-10 grid size-full place-content-center gap-4 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100"
+    >
+      <ExternalLinkIcon class="mx-auto size-8" />
+      <div class="flex flex-wrap gap-2">
+        {
+          project.technologies.map((tech) => (
+            <span class="bg-foreground/20 rounded-full px-3 py-1 text-sm">
+              {tech}
+            </span>
+          ))
+        }
+      </div>
+    </div>
+    <Image
+      src={project.screenshot}
+      alt={project.name}
+      width={600}
+      height={338}
+      loading="lazy"
+      class="relative z-0 object-cover object-center transition-all duration-300 group-hover:scale-110"
+    />
+    <span class="sr-only">{project.name}</span>
+  </a>
+</li>

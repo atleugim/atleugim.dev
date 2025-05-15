@@ -1,0 +1,14 @@
+---
+interface Props {
+  href: string;
+  label: string;
+  download?: string;
+}
+
+const { href, label, download } = Astro.props;
+---
+
+<a href={href} rel="noopener noreferrer" target="_blank" download={download}>
+  <span class="sr-only">{label}</span>
+  <slot />
+</a>

@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+
+import AvailableForWork from "../shared/available-for-work.astro";
+import H1 from "../shared/headings/h1.astro";
+import H2 from "../shared/headings/h2.astro";
+import P from "../shared/headings/p.astro";
+import Section from "../shared/section.astro";
+---
+
+<Section class="items-center md:flex-row">
+  <div class="flex-shrink-0">
+    <Image
+      src="https://github.com/atleugim.png"
+      alt="Miguel Vega"
+      loading="eager"
+      class="border-foreground/5 rounded-full border object-cover shadow-lg"
+      width={128}
+      height={128}
+    />
+  </div>
+  <div class="min-w-[300px] flex-1 text-center md:text-left">
+    <AvailableForWork />
+    <H1>Miguel Vega</H1>
+    <H2 class="text-dimmed">Frontend Developer</H2>
+    <P>
+      React.js & Next.js for the web,
+      <br class="block sm:hidden" />
+      Flutter & Dart for mobile.
+    </P>
+  </div>
+</Section>

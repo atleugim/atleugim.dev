@@ -1,0 +1,89 @@
+---
+import "@fontsource-variable/mona-sans/wdth.css";
+
+import CursorFollower from "~/components/shared/cursor-follower.astro";
+import Inspector from "~/components/shared/meta/inspector.astro";
+import MetaTags from "~/components/shared/meta/tags.astro";
+import ThemeSwitcher from "~/components/shared/theme-switcher.astro";
+
+interface Props {
+  title?: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <Inspector />
+  <MetaTags title={title} />
+
+  <body class="bg-background text-foreground antialiased">
+    <CursorFollower />
+    <main class="relative mx-auto flex w-full max-w-2xl flex-col px-6 py-20">
+      <ThemeSwitcher />
+      <slot />
+      <div
+        class="from-background fixed right-0 bottom-0 left-0 h-20 bg-gradient-to-t to-transparent opacity-80 transition-opacity duration-200"
+      >
+      </div>
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  @import "tailwindcss";
+
+  @variant dark (&:where(.dark, .dark *));
+
+  @theme {
+    --color-background: oklch(98.51% 0 0);
+    --color-foreground: oklch(14.48% 0 0);
+    --color-dimmed: oklch(46.76% 0 0);
+    --color-primary: oklch(44.29% 0.1423 254.28);
+  }
+
+  @layer theme {
+    .dark {
+      --color-background: oklch(14.48% 0 0);
+      --color-foreground: oklch(98.51% 0 0);
+      --color-dimmed: oklch(80.15% 0 0);
+    }
+  }
+
+  @layer base {
+    :root {
+      --default-transition: 0.2s ease-in-out;
+    }
+
+    body {
+      font-family: "Mona Sans Variable", sans-serif;
+      font-display: swap;
+      font-variation-settings: "wdth" 110;
+      font-weight: 400;
+    }
+
+    strong {
+      text-decoration: underline;
+      color: var(--color-foreground);
+      font-weight: 400;
+      transition: font-weight var(--default-transition);
+    }
+
+    strong:hover {
+      font-weight: 600;
+    }
+
+    svg {
+      stroke-width: 1.5;
+      transition:
+        transform var(--default-transition),
+        stroke-width var(--default-transition);
+    }
+
+    svg.contact:hover {
+      stroke-width: 1.8;
+      transform: scale(1.05);
+    }
+  }
+</style>

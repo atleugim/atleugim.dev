@@ -1,0 +1,16 @@
+---
+import { getNowPlaying } from "~/queries/spotify";
+
+import Playing from "./playing.astro";
+
+const data = await getNowPlaying();
+---
+
+{
+  data && (
+    <div class="flex flex-col items-center justify-center space-y-2 font-mono text-sm font-bold">
+      <span class="font-normal">Now Playing</span>
+      <Playing data={data} />
+    </div>
+  )
+}

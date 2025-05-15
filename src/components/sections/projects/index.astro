@@ -1,0 +1,18 @@
+---
+import { getProjects } from "~/queries/repository";
+
+import Article from "~/components/shared/article.astro";
+import Section from "~/components/shared/section.astro";
+
+import ProjectItem from "./item.astro";
+
+const projects = await getProjects();
+---
+
+<Section>
+  <Article title="Projects">
+    <ul class="grid gap-6 md:grid-cols-2">
+      {projects.map((project) => <ProjectItem project={project} />)}
+    </ul>
+  </Article>
+</Section>

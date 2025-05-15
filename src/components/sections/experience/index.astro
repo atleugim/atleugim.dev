@@ -1,0 +1,18 @@
+---
+import { getJobs } from "~/queries/repository";
+
+import Article from "~/components/shared/article.astro";
+import Section from "~/components/shared/section.astro";
+
+import ExperienceItem from "./item.astro";
+
+const jobs = await getJobs();
+---
+
+<Section>
+  <Article title="Experience">
+    <ul class="grid gap-4">
+      {jobs.map((job) => <ExperienceItem job={job} />)}
+    </ul>
+  </Article>
+</Section>

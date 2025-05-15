@@ -1,0 +1,31 @@
+---
+import { EMAIL_URL, GH_URL, LI_URL } from "~/lib/const";
+
+import FileDownload from "~/components/shared/icons/file-download.astro";
+import GithubIcon from "~/components/shared/icons/github.astro";
+import LinkedIn from "~/components/shared/icons/linked-in.astro";
+import Mail from "~/components/shared/icons/mail.astro";
+
+import ContactItem from "./item.astro";
+
+const { class: className, ...rest } = Astro.props;
+---
+
+<div class:list={["flex w-full gap-4", className]} {...rest}>
+  <ContactItem href={GH_URL} label="GitHub">
+    <GithubIcon class="contact size-5" />
+  </ContactItem>
+  <ContactItem href={LI_URL} label="LinkedIn">
+    <LinkedIn class="contact size-5" />
+  </ContactItem>
+  <ContactItem href={EMAIL_URL} label="Email">
+    <Mail class="contact size-5" />
+  </ContactItem>
+  <ContactItem
+    href="/resume.pdf"
+    label="Download Resume"
+    download="Miguel Vega - Resume.pdf"
+  >
+    <FileDownload class="contact size-5" />
+  </ContactItem>
+</div>
