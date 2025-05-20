@@ -10,7 +10,10 @@ const projects = await getProjects();
 ---
 
 <Section>
-  <Article title="Projects">
+  <Article
+    title="Projects"
+    description="Here are some of the public projects I've worked on."
+  >
     <ul class="grid gap-6 md:grid-cols-2">
       {projects.map((project) => <ProjectItem project={project} />)}
     </ul>

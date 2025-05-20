@@ -12,7 +12,6 @@ View the live site at <https://atleugim.dev>
 
 ![image](https://github.com/user-attachments/assets/a4fca17d-2e05-47a2-a08f-42eee86e01b1)
 
-
 ### Install dependencies
 
 ```bash
