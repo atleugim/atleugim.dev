@@ -1,4 +1,4 @@
-export const EMAIL_ADDRESS = "contact@atleugim.dev";
+export const EMAIL_ADDRESS = import.meta.env.EMAIL_ADDRESS;
 
 export const GH_URL = "https://github.com/atleugim";
 export const LI_URL = "https://linkedin.com/in/atleugim";
