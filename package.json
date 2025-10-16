@@ -12,13 +12,15 @@
     "format": "lint-staged"
   },
   "dependencies": {
-    "@astrojs/vercel": "^8.2.8",
+    "@astrojs/vercel": "^8.2.10",
     "@fontsource-variable/mona-sans": "^5.2.8",
     "@tailwindcss/vite": "^4.1.13",
-    "astro": "^5.14.0",
+    "astro": "^5.14.5",
     "tailwindcss": "^4.1.13"
   },
   "devDependencies": {
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
     "@ianvs/prettier-plugin-sort-imports": "^4.7.0",
     "@typescript-eslint/parser": "^8.44.1",
     "eslint": "^9.36.0",
