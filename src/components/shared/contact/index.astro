@@ -1,5 +1,5 @@
 ---
-import { EMAIL_URL, GH_URL, LI_URL } from "~/lib/const";
+import { EMAIL_URL, GH_URL, LI_URL, RESUME_URL } from "~/lib/const";
 
 import FileDownload from "~/components/shared/icons/file-download.astro";
 import GithubIcon from "~/components/shared/icons/github.astro";
@@ -22,7 +22,7 @@ const { class: className, ...rest } = Astro.props;
     <Mail class="contact size-5" />
   </ContactItem>
   <ContactItem
-    href="/resume.pdf"
+    href={RESUME_URL}
     label="Download Resume"
     download="Miguel Vega - Resume.pdf"
   >
