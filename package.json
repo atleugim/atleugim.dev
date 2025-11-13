@@ -12,23 +12,23 @@
     "format": "lint-staged"
   },
   "dependencies": {
-    "@astrojs/vercel": "^8.2.10",
+    "@astrojs/vercel": "^9.0.0",
     "@fontsource-variable/mona-sans": "^5.2.8",
-    "@tailwindcss/vite": "^4.1.13",
-    "astro": "^5.14.5",
-    "tailwindcss": "^4.1.13"
+    "@tailwindcss/vite": "^4.1.17",
+    "astro": "^5.15.6",
+    "tailwindcss": "^4.1.17"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
     "@ianvs/prettier-plugin-sort-imports": "^4.7.0",
-    "@typescript-eslint/parser": "^8.44.1",
-    "eslint": "^9.36.0",
-    "eslint-plugin-astro": "^1.3.1",
+    "@typescript-eslint/parser": "^8.46.4",
+    "eslint": "^9.39.1",
+    "eslint-plugin-astro": "^1.5.0",
     "husky": "^9.1.7",
-    "lint-staged": "^16.2.1",
+    "lint-staged": "^16.2.6",
     "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-tailwindcss": "^0.6.14"
+    "prettier-plugin-tailwindcss": "^0.7.1"
   }
 }
