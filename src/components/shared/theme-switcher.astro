@@ -23,13 +23,22 @@ import LightModeIcon from "./icons/light-mode.astro";
     const metaThemeColor = document.querySelector("meta[name=theme-color]");
 
     const handleToggleClick = () => {
-      const element = document.documentElement;
-      element.classList.toggle("dark");
+      const updateTheme = () => {
+        const element = document.documentElement;
+        element.classList.toggle("dark");
 
-      const isDark = element.classList.contains("dark");
-      localStorage.setItem("theme", isDark ? "dark" : "light");
+        const isDark = element.classList.contains("dark");
+        localStorage.setItem("theme", isDark ? "dark" : "light");
 
-      metaThemeColor?.setAttribute("content", isDark ? "#0A0A0A" : "#FAFAFA");
+        metaThemeColor?.setAttribute("content", isDark ? "#0A0A0A" : "#FAFAFA");
+      };
+
+      const startViewTransition = (document as any).startViewTransition;
+      if (typeof startViewTransition === "function") {
+        startViewTransition.call(document, updateTheme);
+      } else {
+        updateTheme();
+      }
     };
 
     themeSwitcherBtn?.addEventListener("click", handleToggleClick);
@@ -66,3 +75,33 @@ import LightModeIcon from "./icons/light-mode.astro";
 
   setTheme();
 </script>
+
+<style is:global>
+  ::view-transition-group(root) {
+    animation-timing-function: var(--expo-out);
+  }
+
+  ::view-transition-new(root) {
+    mask: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><defs><filter id="blur"><feGaussianBlur stdDeviation="2"/></filter></defs><circle cx="20" cy="20" r="18" fill="white" filter="url(%23blur)"/></svg>')
+      center / 0 no-repeat;
+    animation: scale 1s;
+    animation-fill-mode: both;
+  }
+
+  ::view-transition-old(root),
+  .dark::view-transition-old(root) {
+    animation: none;
+    animation-fill-mode: both;
+    z-index: -1;
+  }
+  .dark::view-transition-new(root) {
+    animation: scale 1s;
+    animation-fill-mode: both;
+  }
+
+  @keyframes scale {
+    to {
+      mask-size: 200vmax;
+    }
+  }
+</style>
