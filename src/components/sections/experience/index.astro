@@ -7,11 +7,12 @@ import Section from "~/components/shared/section.astro";
 import ExperienceItem from "./item.astro";
 
 const jobs = await getJobs();
+console.log(jobs);
 ---
 
 <Section>
   <Article title="Experience">
-    <ul class="grid gap-4">
+    <ul class="grid gap-8">
       {jobs.map((job) => <ExperienceItem job={job} />)}
     </ul>
   </Article>

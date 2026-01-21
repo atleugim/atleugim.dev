@@ -34,7 +34,7 @@ interface Job {
   logo: string;
   date: string;
   role: string;
-  description: string;
+  description: string[];
   current?: boolean;
   color: string;
 }

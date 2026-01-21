@@ -12,10 +12,10 @@
     "format": "lint-staged"
   },
   "dependencies": {
-    "@astrojs/vercel": "^9.0.3",
-    "@fontsource-variable/mona-sans": "^5.2.8",
+    "@astrojs/vercel": "^9.0.4",
+    "@fontsource-variable/manrope": "^5.2.8",
     "@tailwindcss/vite": "^4.1.17",
-    "astro": "^5.16.7",
+    "astro": "^5.16.12",
     "tailwindcss": "^4.1.17"
   },
   "devDependencies": {
