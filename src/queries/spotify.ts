@@ -29,9 +29,7 @@ const getAccessToken = async (): Promise<{ access_token: string }> => {
   return response.json();
 };
 
-export const getNowPlaying = async (): Promise<
-  SpotifyNowPlaying | undefined
-> => {
+export const getNowPlaying = async (): Promise<SpotifyNowPlaying | null> => {
   try {
     const { access_token } = await getAccessToken();
 
@@ -58,8 +56,7 @@ export const getNowPlaying = async (): Promise<
       name: res.item.name,
       image: getSmallestImage(res.item.album.images),
     };
-  } catch (err) {
-    console.log(err);
-    return undefined;
+  } catch {
+    return null;
   }
 };

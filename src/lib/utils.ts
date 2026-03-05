@@ -8,8 +8,8 @@ export const joinArray = (array: Array<any>, locale = "en"): string => {
 
 export const getSmallestImage = (
   images: Array<SpotifyImage>,
-): SpotifyImage | undefined => {
-  if (!images || images.length === 0) return undefined;
+): SpotifyImage | null => {
+  if (!images || images.length === 0) return null;
 
   return images.reduce((smallest, image) => {
     return smallest.width * smallest.height < image.width * image.height

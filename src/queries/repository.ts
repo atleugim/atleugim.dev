@@ -11,8 +11,7 @@ export const getJobs = async (): Promise<Job[]> => {
     }
 
     return response.json();
-  } catch (err) {
-    console.error(err);
+  } catch {
     return [];
   }
 };
@@ -28,8 +27,7 @@ export const getProjects = async (): Promise<Project[]> => {
     }
 
     return response.json();
-  } catch (err) {
-    console.error(err);
+  } catch {
     return [];
   }
 };
