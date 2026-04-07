@@ -10,7 +10,7 @@ View the live site at <https://atleugim.dev>
 
 ### Preview
 
-<img width="1501" height="2204" alt="web (1)" src="https://github.com/user-attachments/assets/7c5bb4a7-40df-41d9-8e99-6f3afd44dd8e" />
+<img width="1500" alt="atleugim.dev" src="https://github.com/user-attachments/assets/d0d3b59f-beaf-452b-a0f7-27b93668056b" />
 
 ### Install dependencies
 
