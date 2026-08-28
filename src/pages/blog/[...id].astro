@@ -1,0 +1,85 @@
+---
+import { getCollection, render } from "astro:content";
+
+import Layout from "~/layouts/layout.astro";
+
+import { formatDate, getReadingTime } from "~/lib/utils";
+
+import H1 from "~/components/shared/headings/h1.astro";
+import P from "~/components/shared/headings/p.astro";
+import Prose from "~/components/shared/prose.astro";
+import Section from "~/components/shared/section.astro";
+
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => !data.draft);
+
+  return posts.map((post) => ({
+    params: { id: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const { title, description, publishedAt, updatedAt, tags } = post.data;
+---
+
+<Layout
+  title={title}
+  description={description}
+  type="article"
+  publishedAt={publishedAt}
+  updatedAt={updatedAt}
+>
+  <Section class="gap-8">
+    <a
+      href="/blog"
+      class="text-dimmed hover:text-foreground text-sm transition-colors"
+    >
+      ← Writing
+    </a>
+
+    <header class="grid gap-3">
+      <div
+        class="text-dimmed flex flex-wrap items-center gap-2 font-mono text-xs"
+      >
+        <time datetime={publishedAt.toISOString()}>
+          {formatDate(publishedAt)}
+        </time>
+        <span aria-hidden="true">•</span>
+        <span>{getReadingTime(post.body ?? "")}</span>
+        {
+          updatedAt && (
+            <>
+              <span aria-hidden="true">•</span>
+              <span>updated {formatDate(updatedAt)}</span>
+            </>
+          )
+        }
+      </div>
+
+      <H1>{title}</H1>
+      <P>{description}</P>
+
+      {
+        tags.length > 0 && (
+          <ul class="mt-1 flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <li class="bg-foreground/8 text-dimmed rounded-full px-3 py-0.5 text-xs">
+                {tag}
+              </li>
+            ))}
+          </ul>
+        )
+      }
+    </header>
+
+    <hr class="border-foreground/10" />
+
+    <Prose>
+      <Content />
+    </Prose>
+  </Section>
+</Layout>

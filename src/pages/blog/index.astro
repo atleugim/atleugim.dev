@@ -1,0 +1,61 @@
+---
+import Layout from "~/layouts/layout.astro";
+
+import { getPosts } from "~/lib/posts";
+import { formatDate } from "~/lib/utils";
+
+import H1 from "~/components/shared/headings/h1.astro";
+import P from "~/components/shared/headings/p.astro";
+import Section from "~/components/shared/section.astro";
+
+export const prerender = true;
+
+const posts = await getPosts();
+---
+
+<Layout
+  title="Writing"
+  description="Notes on Dart, Flutter, the web, and the things I build."
+>
+  <Section class="gap-8">
+    <a
+      href="/"
+      class="text-dimmed hover:text-foreground text-sm transition-colors"
+    >
+      ← Back
+    </a>
+
+    <div class="grid gap-1">
+      <H1>Writing</H1>
+      <P>Notes on the things I build, every once in a while.</P>
+    </div>
+
+    {
+      posts.length === 0 ? (
+        <P>Nothing published yet. Check back soon.</P>
+      ) : (
+        <ul class="grid gap-8">
+          {posts.map((post) => (
+            <li>
+              <a
+                href={`/blog/${post.id}`}
+                class="group grid gap-1 no-underline hover:font-normal"
+              >
+                <time
+                  datetime={post.data.publishedAt.toISOString()}
+                  class="text-dimmed font-mono text-xs"
+                >
+                  {formatDate(post.data.publishedAt)}
+                </time>
+                <h2 class="decoration-foreground/30 text-lg font-bold underline-offset-4 group-hover:underline sm:text-xl">
+                  {post.data.title}
+                </h2>
+                <P class="text-sm">{post.data.description}</P>
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </Section>
+</Layout>

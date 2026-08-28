@@ -17,3 +17,17 @@ export const getSmallestImage = (
       : image;
   }, images[0]);
 };
+
+export const formatDate = (date: Date, locale = "en-US"): string => {
+  return new Intl.DateTimeFormat(locale, {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    timeZone: "UTC",
+  }).format(date);
+};
+
+export const getReadingTime = (body: string): string => {
+  const words = body.trim().split(/\s+/).length;
+  return `${Math.max(1, Math.round(words / 200))} min read`;
+};

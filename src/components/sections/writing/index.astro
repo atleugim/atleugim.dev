@@ -1,0 +1,36 @@
+---
+import { getPosts } from "~/lib/posts";
+
+import Article from "~/components/shared/article.astro";
+import Section from "~/components/shared/section.astro";
+
+import WritingItem from "./item.astro";
+
+const LATEST_POSTS = 3;
+
+const posts = await getPosts();
+const latest = posts.slice(0, LATEST_POSTS);
+---
+
+{
+  latest.length > 0 && (
+    <Section>
+      <Article
+        title="Writing"
+        description="Notes on the things I build, every once in a while."
+      >
+        <ul class="grid gap-5">
+          {latest.map((post) => (
+            <WritingItem post={post} />
+          ))}
+        </ul>
+
+        {posts.length > latest.length && (
+          <a href="/blog" class="mt-2 text-sm">
+            All posts →
+          </a>
+        )}
+      </Article>
+    </Section>
+  )
+}

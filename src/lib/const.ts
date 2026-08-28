@@ -1,5 +1,11 @@
 export const EMAIL_ADDRESS = import.meta.env.EMAIL_ADDRESS;
 
+export const SITE_URL = "https://atleugim.dev";
+export const SITE_TITLE = "Miguel Vega - Frontend Developer";
+export const SITE_DESCRIPTION =
+  "Frontend developer specialized in web and mobile development, building personal digital experiences.";
+export const SITE_IMAGE = "https://github.com/atleugim.png";
+
 export const GH_URL = "https://github.com/atleugim";
 export const LI_URL = "https://linkedin.com/in/atleugim";
 export const EMAIL_URL = `mailto:${EMAIL_ADDRESS}`;
