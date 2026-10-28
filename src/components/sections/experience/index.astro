@@ -12,7 +12,9 @@ const jobs = await getJobs();
 <Section>
   <Article title="Experience">
     <ul class="grid gap-8">
-      {jobs.map((job) => <ExperienceItem job={job} />)}
+      {jobs.map((job) => (
+        <ExperienceItem job={job} />
+      ))}
     </ul>
   </Article>
 </Section>

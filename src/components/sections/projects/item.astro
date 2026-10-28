@@ -17,18 +17,14 @@ const { project } = Astro.props;
     target="_blank"
     class="group relative"
   >
-    <div
-      class="bg-background/30 absolute z-10 grid size-full place-content-center gap-4 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100"
-    >
+    <div class="bg-background/30 absolute z-10 grid size-full place-content-center gap-4 opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover:opacity-100">
       <ExternalLinkIcon class="mx-auto size-8" />
       <div class="flex flex-wrap gap-2">
-        {
-          project.technologies.map((tech) => (
-            <span class="bg-foreground/20 rounded-full px-3 py-1 text-sm">
-              {tech}
-            </span>
-          ))
-        }
+        {project.technologies.map((tech) => (
+          <span class="bg-foreground/20 rounded-full px-3 py-1 text-sm">
+            {tech}
+          </span>
+        ))}
       </div>
     </div>
     <Image

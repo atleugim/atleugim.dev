@@ -40,11 +40,7 @@ interface Job {
 }
 
 type ProjectTechnology =
-  | "React.js"
-  | "Next.js"
-  | "Tailwind CSS"
-  | "Flutter"
-  | "Dart";
+  "React.js" | "Next.js" | "Tailwind CSS" | "Flutter" | "Dart";
 
 interface Project {
   name: string;

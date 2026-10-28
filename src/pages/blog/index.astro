@@ -30,32 +30,30 @@ const posts = await getPosts();
       <P>Notes on the things I build, every once in a while.</P>
     </div>
 
-    {
-      posts.length === 0 ? (
-        <P>Nothing published yet. Check back soon.</P>
-      ) : (
-        <ul class="grid gap-8">
-          {posts.map((post) => (
-            <li>
-              <a
-                href={`/blog/${post.id}`}
-                class="group grid gap-1 no-underline hover:font-normal"
+    {posts.length === 0 ? (
+      <P>Nothing published yet. Check back soon.</P>
+    ) : (
+      <ul class="grid gap-8">
+        {posts.map((post) => (
+          <li>
+            <a
+              href={`/blog/${post.id}`}
+              class="group grid gap-1 no-underline hover:font-normal"
+            >
+              <time
+                datetime={post.data.publishedAt.toISOString()}
+                class="text-dimmed font-mono text-xs"
               >
-                <time
-                  datetime={post.data.publishedAt.toISOString()}
-                  class="text-dimmed font-mono text-xs"
-                >
-                  {formatDate(post.data.publishedAt)}
-                </time>
-                <h2 class="decoration-foreground/30 text-lg font-bold underline-offset-4 group-hover:underline sm:text-xl">
-                  {post.data.title}
-                </h2>
-                <P class="text-sm">{post.data.description}</P>
-              </a>
-            </li>
-          ))}
-        </ul>
-      )
-    }
+                {formatDate(post.data.publishedAt)}
+              </time>
+              <h2 class="decoration-foreground/30 text-lg font-bold underline-offset-4 group-hover:underline sm:text-xl">
+                {post.data.title}
+              </h2>
+              <P class="text-sm">{post.data.description}</P>
+            </a>
+          </li>
+        ))}
+      </ul>
+    )}
   </Section>
 </Layout>

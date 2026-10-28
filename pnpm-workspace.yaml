@@ -1,3 +1,9 @@
 allowBuilds:
   esbuild: true
   sharp: true
+minimumReleaseAgeExclude:
+  - "@astrojs/markdown-satteri@0.4.6"
+  - "@astrojs/prism@4.1.2"
+  - "@astrojs/telemetry@3.4.2"
+  - "@astrojs/vercel@11.0.17"
+  - astro@7.4.3

@@ -9,7 +9,7 @@ If you build apps in Colombia, sooner or later you have to take a payment, and s
 
 There are two documented ways into it from a client: a JavaScript widget, which is not an option in Flutter, and the **Web Checkout**, a page Wompi hosts that you send the payer to with everything encoded in the URL. The second one is the practical path. You build a URL, you open it in a webview or the system browser, Wompi handles the cards and the PSE flow and the 3DS challenges, and the payer comes back to your `redirectUrl` when it's over.
 
-So the whole integration reduces to *building a URL correctly*. Which sounds like nothing, and then you get to the signature.
+So the whole integration reduces to _building a URL correctly_. Which sounds like nothing, and then you get to the signature.
 
 That's what [`wompi_web_checkout`](https://pub.dev/packages/wompi_web_checkout) is for. It's a pure Dart package (no Flutter dependency, two small ones) that builds those URLs, signs them, and validates everything before you ever hit the network.
 

@@ -15,7 +15,9 @@ const projects = await getProjects();
     description="Here are some of the public projects I've worked on."
   >
     <ul class="grid gap-6 md:grid-cols-2">
-      {projects.map((project) => <ProjectItem project={project} />)}
+      {projects.map((project) => (
+        <ProjectItem project={project} />
+      ))}
     </ul>
   </Article>
 </Section>

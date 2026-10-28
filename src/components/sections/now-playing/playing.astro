@@ -18,19 +18,17 @@ const { data } = Astro.props;
   target="_blank"
   class="flex w-full items-start justify-center gap-2 text-center"
 >
-  {
-    data.image ? (
-      <Image
-        src={data.image.url}
-        alt={data.name}
-        width={20}
-        height={20}
-        class="border-card animate-[spin_5s_linear_infinite] rounded-full border"
-      />
-    ) : (
-      <SpotifyIcon class="size-5" />
-    )
-  }
+  {data.image ? (
+    <Image
+      src={data.image.url}
+      alt={data.name}
+      width={20}
+      height={20}
+      class="border-card animate-[spin_5s_linear_infinite] rounded-full border"
+    />
+  ) : (
+    <SpotifyIcon class="size-5" />
+  )}
   <span>
     {joinArray(data.artists.map((a) => a.name))} - {data.name}
   </span>

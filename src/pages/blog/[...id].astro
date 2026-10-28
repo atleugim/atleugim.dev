@@ -42,38 +42,32 @@ const { title, description, publishedAt, updatedAt, tags } = post.data;
     </a>
 
     <header class="grid gap-3">
-      <div
-        class="text-dimmed flex flex-wrap items-center gap-2 font-mono text-xs"
-      >
+      <div class="text-dimmed flex flex-wrap items-center gap-2 font-mono text-xs">
         <time datetime={publishedAt.toISOString()}>
           {formatDate(publishedAt)}
         </time>
         <span aria-hidden="true">•</span>
         <span>{getReadingTime(post.body ?? "")}</span>
-        {
-          updatedAt && (
-            <>
-              <span aria-hidden="true">•</span>
-              <span>updated {formatDate(updatedAt)}</span>
-            </>
-          )
-        }
+        {updatedAt && (
+          <>
+            <span aria-hidden="true">•</span>
+            <span>updated {formatDate(updatedAt)}</span>
+          </>
+        )}
       </div>
 
       <H1>{title}</H1>
       <P>{description}</P>
 
-      {
-        tags.length > 0 && (
-          <ul class="mt-1 flex flex-wrap gap-2">
-            {tags.map((tag) => (
-              <li class="bg-foreground/8 text-dimmed rounded-full px-3 py-0.5 text-xs">
-                {tag}
-              </li>
-            ))}
-          </ul>
-        )
-      }
+      {tags.length > 0 && (
+        <ul class="mt-1 flex flex-wrap gap-2">
+          {tags.map((tag) => (
+            <li class="bg-foreground/8 text-dimmed rounded-full px-3 py-0.5 text-xs">
+              {tag}
+            </li>
+          ))}
+        </ul>
+      )}
     </header>
 
     <hr class="border-foreground/10" />
