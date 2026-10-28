@@ -1,9 +1,9 @@
 export const EMAIL_ADDRESS = import.meta.env.EMAIL_ADDRESS;
 
 export const SITE_URL = "https://atleugim.dev";
-export const SITE_TITLE = "Miguel Vega - Frontend Developer";
+export const SITE_TITLE = "Miguel Vega - Software Engineer";
 export const SITE_DESCRIPTION =
-  "Frontend developer specialized in web and mobile development, building personal digital experiences.";
+  "Software engineer based in Colombia. I build products end to end: interfaces people actually use, and the services and integrations behind them.";
 export const SITE_IMAGE = "https://github.com/atleugim.png";
 
 export const GH_URL = "https://github.com/atleugim";
